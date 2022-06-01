@@ -256,10 +256,9 @@
             headers: {
                'Content-type': 'application/json'
             },
-            body: JSON.stringify(object)
-         }).then(data => data.text()
-
-         ).then(data =>{
+            body: JSON.stringify(object)})
+         .then(data => data.text())
+         .then(data =>{
                console.log(data);
                showThanksModal(message.success);
                statusMessage.remove();
@@ -293,13 +292,12 @@
        const thanksModal = document.createElement('div');
       thanksModal.classList.add('.modal__dialog');
       thanksModal.innerHTML = `
-      
-      <div class ="modal__content">
+         <div class ="modal__content">
          <div class ="modal__close" data_close>×</div>
          <div class = "modal__title">${message}</div>
       
       </div>
-      
+       
       `;
       
       document.querySelector('.modal').append(thanksModal);

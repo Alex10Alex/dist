@@ -25,5 +25,5 @@ req.then((product) => {
     console.log(data);
 
 }).catch(() =>{
-    console.log('error');
+    console.log('error'); 
 });
